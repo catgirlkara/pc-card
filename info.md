@@ -1,14 +1,14 @@
 
-# TV Remote Card
+# PC Remote Card
 
 **Sample overview:**
 
-<img src="https://github.com/usernein/tv-card/blob/master/assets/screenshot.png" alt="screenshot" width="300"/>
+<img src="https://github.com/catgirlkara/pc-card/blob/master/assets/screenshot.png" alt="screenshot" width="300"/>
 
 Add this to your lovelace configuration if your tv is a Samsung Smart TV:
 
 ```yaml
-type: custom:tv-card
+type: custom:pc-card
 entity: media_player.tv
 title: Example 2
 power_row:
@@ -33,7 +33,5 @@ media_control_row:
   - pause
   - fast_forward
 ```
-
-If you're not using Samsung, you may want to set custom buttons for your tv. [Check it out](https://github.com/usernein/tv-card/blob/master/README.md#notice).
 
 Look at [README](https://github.com/usernein/tv-card/blob/master/README.md) for more information

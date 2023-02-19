@@ -166,12 +166,12 @@ class PCCardServices extends LitElement {
         }, { entity_id: entity_id });
     }
 
-    sendMouseDelta(key) {
+    sendMouseDelta(deltaX, deltaY) {
         let entity_id = this._config.entity;
 
-        this._hass.callService("media_player", "play_media", {
-            media_content_id: key,
-            media_content_type: "send_key",
+        this._hass.callService("mqtt.publish", {
+            topic: "homeassistant/button/CATGIRLKARA/move_mouse/action",
+            payload:`-deltaX:${deltaX} -deltaY:${deltaY}`,
         }, { entity_id: entity_id });
     }
 
