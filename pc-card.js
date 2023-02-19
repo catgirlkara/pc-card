@@ -168,9 +168,8 @@ class PCCardServices extends LitElement {
 
     sendMouseDelta(deltaX, deltaY) {
         let entity_id = this._config.entity;
-        console.log("Sending Mouse Delta to CATGIRLKARA");
-        this._hass.callService("mqtt.publish", `topic: \"homeassistant/button/CATGIRLKARA/move_mouse/action\",\n                payload:\"-deltaX:${deltaX} -deltaY:${deltaY}\"`
-        , { entity_id: entity_id });
+        console.log("FFS Sending Mouse Delta to CATGIRLKARA");
+        this._hass.callService("mqtt.publish", { entity_id: entity_id });
     }
 
     changeSource(source) {
@@ -184,6 +183,7 @@ class PCCardServices extends LitElement {
 
     onClick(event) {
         event.stopImmediatePropagation();
+        this.sendMouseDelta(50, 50);
         let click_action = () => {
             this.sendKey("KEY_ENTER");
             if (this._config.enable_button_feedback === undefined || this._config.enable_button_feedback) fireEvent(window, "haptic", "light");
@@ -341,6 +341,7 @@ class PCCardServices extends LitElement {
                                 id="toucharea"
                                 @click="${this.onClick}"
                                 @dblclick="${this.onDoubleClick}"
+                                @drag="${this.onTouchStart}"
                                 @touchstart="${this.onTouchStart}"
                                 @touchmove="${this.onTouchMove}"
                                 @touchend="${this.onTouchEnd}">
