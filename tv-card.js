@@ -157,6 +157,24 @@ class TVCardServices extends LitElement {
         }, { entity_id: entity_id });
     }
 
+    sendMouse(key) {
+        let entity_id = this._config.entity;
+
+        this._hass.callService("media_player", "play_media", {
+            media_content_id: key,
+            media_content_type: "send_key",
+        }, { entity_id: entity_id });
+    }
+
+    sendMouseDelta(key) {
+        let entity_id = this._config.entity;
+
+        this._hass.callService("media_player", "play_media", {
+            media_content_id: key,
+            media_content_type: "send_key",
+        }, { entity_id: entity_id });
+    }
+
     changeSource(source) {
         let entity_id = this._config.entity;
 
@@ -228,17 +246,7 @@ class TVCardServices extends LitElement {
         var diffX = initialX - currentX;
         var diffY = initialY - currentY;
 
-        if (Math.abs(diffX) > Math.abs(diffY)) {
-            // sliding horizontally
-            let key = diffX > 0 ? "KEY_LEFT" : "KEY_RIGHT";
-            this.holdaction = key;
-            this.sendKey(key);
-        } else {
-            // sliding vertically
-            let key = diffY > 0 ? "KEY_UP" : "KEY_DOWN";
-            this.holdaction = key;
-            this.sendKey(key);
-        }
+        this.sendMouseDelta(diffX, diffY);
 
         if (this._config.enable_button_feedback === undefined || this._config.enable_button_feedback) fireEvent(window, "haptic", "selection");
         initialX = null;

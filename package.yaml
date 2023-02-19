@@ -1,13 +1,13 @@
-name: TV Card
-description: 📺 TV Remote Card
+name: PC Card
+description: 📺 PC Remote Card
 type: lovelace
 keywords:
-  - tvcard
+  - pccard
   - remote
-  - tv
-  - television
+  - pc
+  - htpc
 author:
-  name: mar_robHD
+  name: catgirlkara
 license: Apache License, Version 2.0
 files:
   - tv-card.js
