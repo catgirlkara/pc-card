@@ -168,7 +168,7 @@ class PCCardServices extends LitElement {
 
     sendMouseDelta(deltaX, deltaY) {
         this._hass.callService("mqtt", "publish", {
-            topic: "homeassistant/button/CATGIRLKARA/move_mouse/action",
+            topic: "homeassistant/button/CATGIRLKARA/move_mouse",
             payload:`-deltaX:${deltaX} -deltaY:${deltaY}`,
         });
     }
