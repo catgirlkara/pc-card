@@ -2,10 +2,9 @@
 
 [![GitHub Release][releases-shield]][releases]
 [![License][license-shield]](LICENSE.md)
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][last-commit-shield]][commits]
-[![Community Forum][forum-shield]][forum]
 
 [![Github][github]][github]
 
@@ -327,12 +326,11 @@ media_control_row:
 
 <img src="assets/empty_buttons.png" alt="empty buttons example" width="300"/>
 
-[last-commit-shield]: https://img.shields.io/github/last-commit/usernein/tv-card?style=for-the-badge
-[commits]: https://github.com/usernein/tv-card/commits/master
+[last-commit-shield]: https://img.shields.io/github/last-commit/catgirlkara/pc-card?style=for-the-badge
+[commits]: https://github.com/catgirlkara/pc-card/commits/master
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
-[forum]: https://community.home-assistant.io/t/lovelace-an-awesome-modified-tv-card-with-touchpad-and-haptic-feedback/432791
-[license-shield]: https://img.shields.io/github/license/usernein/tv-card.svg?style=for-the-badge
-[maintenance-shield]: https://img.shields.io/badge/maintainer-usernein-blue.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/usernein/tv-card.svg?style=for-the-badge
-[releases]: https://github.com/usernein/tv-card/releases
-[github]: https://img.shields.io/github/followers/usernein.svg?style=social
+[license-shield]: https://img.shields.io/github/license/catgirlkara/pc-card.svg?style=for-the-badge
+[maintenance-shield]: https://img.shields.io/badge/maintainer-catgirlkara-blue.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/catgirlkara/pc-card.svg?style=for-the-badge
+[releases]: https://github.com/catgirlkara/pc-card/releases
+[github]: https://img.shields.io/github/followers/catgirlkara.svg?style=social
