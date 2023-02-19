@@ -1,4 +1,4 @@
-# TV Remote Card (with touchpad and haptic feedback)
+# PC Remote Card (with touchpad and haptic feedback)
 
 [![GitHub Release][releases-shield]][releases]
 [![License][license-shield]](LICENSE.md)
@@ -9,15 +9,11 @@
 
 [![Github][github]][github]
 
-📦 This repo is a fork of [tv-card](https://github.com/marrobHD/tv-card) and includes a bunch of new features and improvements, like:
+📦 This repo is a fork of [tv-card](https://github.com/usernein/tv-card) to remotely control a windows home theatre pc
 
-- Fully functional touchpad for navigation (thanks to [iablon's Touchpad Card](https://github.com/iablon/HomeAssistant-Touchpad-Card)) ❤️
+- Fully functional touchpad to control the mouse (thanks to [iablon's Touchpad Card](https://github.com/iablon/HomeAssistant-Touchpad-Card)) ❤️
 - Slider for volume (thanks to [AnthonMS's Slider Card](https://github.com/AnthonMS/my-cards#slider-card)) ❤️
-- Supports [ollo69's SamsungTV Smart Component](https://github.com/ollo69/ha-samsungtv-smart)
-- Much easier setup
-- Implements haptics feedback
 - Customizable layout, you can choose the order of the rows and buttons
-- All rows and buttons are optional, you can change whatever you *(don't)* like
 
 ## Demo
 
