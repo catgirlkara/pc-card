@@ -151,28 +151,26 @@ class PCCardServices extends LitElement {
     sendKey(key) {
         let entity_id = this._config.entity;
 
-        this._hass.callService("media_player", "play_media", {
-            media_content_id: key,
-            media_content_type: "send_key",
-        }, { entity_id: entity_id });
+        // this._hass.callService("media_player", "play_media", {
+        //     media_content_id: key,
+        //     media_content_type: "send_key",
+        // }, { entity_id: entity_id });
     }
 
     sendMouse(key) {
         let entity_id = this._config.entity;
 
-        this._hass.callService("media_player", "play_media", {
-            media_content_id: key,
-            media_content_type: "send_key",
-        }, { entity_id: entity_id });
+        // this._hass.callService("media_player", "play_media", {
+        //     media_content_id: key,
+        //     media_content_type: "send_key",
+        // }, { entity_id: entity_id });
     }
 
     sendMouseDelta(deltaX, deltaY) {
         let entity_id = this._config.entity;
-
-        this._hass.callService("mqtt.publish", {
-            topic: "homeassistant/button/CATGIRLKARA/move_mouse/action",
-            payload:`-deltaX:${deltaX} -deltaY:${deltaY}`,
-        }, { entity_id: entity_id });
+        console.log("Sending Mouse Delta to CATGIRLKARA");
+        this._hass.callService("mqtt.publish", `topic: \"homeassistant/button/CATGIRLKARA/move_mouse/action\",\n                payload:\"-deltaX:${deltaX} -deltaY:${deltaY}\"`
+        , { entity_id: entity_id });
     }
 
     changeSource(source) {
