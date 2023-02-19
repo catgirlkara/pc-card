@@ -42,7 +42,7 @@ var fireEvent = function(node, type, detail, options) {
     return event;
 };
 
-class TVCardServices extends LitElement {
+class PCCardServices extends LitElement {
     constructor() {
         super();
 
@@ -441,4 +441,4 @@ class TVCardServices extends LitElement {
     }
 }
 
-customElements.define("tv-card", TVCardServices);
+customElements.define("pc-card", PCCardServices);

@@ -1,10 +1,9 @@
 # PC Remote Card (with touchpad and haptic feedback)
 
-[![GitHub Release][releases-shield]][releases]
-[![License][license-shield]](LICENSE.md)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
-![Project Maintenance][maintenance-shield]
+[![GitHub Release][releases-shield]][releases]
 [![GitHub Activity][last-commit-shield]][commits]
+[![License][license-shield]](LICENSE.md)
 
 [![Github][github]][github]
 
