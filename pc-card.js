@@ -168,7 +168,6 @@ class PCCardServices extends LitElement {
 
     sendMouseDelta(deltaX, deltaY) {
         let entity_id = this._config.entity;
-        console.log("Sending Mouse Delta to CATGIRLKARA");
         this._hass.callService("mqtt", "publish", {
             topic: "homeassistant/button/CATGIRLKARA/move_mouse/action",
             payload:`-deltaX:${deltaX} -deltaY:${deltaY}`,
