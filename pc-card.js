@@ -168,7 +168,7 @@ class PCCardServices extends LitElement {
 
     sendMouseDelta(deltaX, deltaY) {
         this._hass.callService("mqtt", "publish", {
-            topic: "homeassistant/button/CATGIRLKARA/move_mouse",
+            topic: "homeassistant/button/CATGIRLKARA/move_mouse/action",
             payload:`-deltaX:${deltaX} -deltaY:${deltaY}`,
         });
     }
@@ -184,7 +184,12 @@ class PCCardServices extends LitElement {
 
     onClick(event) {
         event.stopImmediatePropagation();
-        this.sendMouseDelta(100, 100);
+     
+        this._hass.callService("mqtt", "publish", {
+            topic: "homeassistant/switch/CATGIRLKARA/test-custom/action",
+            payload:"\"D:\\test_file.txt\"",
+        });
+
         let click_action = () => {
             this.sendKey("KEY_ENTER");
             if (this._config.enable_button_feedback === undefined || this._config.enable_button_feedback) fireEvent(window, "haptic", "light");
