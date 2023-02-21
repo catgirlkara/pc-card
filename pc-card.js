@@ -169,7 +169,7 @@ class PCCardServices extends LitElement {
     sendMouseDelta(deltaX, deltaY) {
         this._hass.callService("mqtt", "publish", {
             topic: "homeassistant/button/CATGIRLKARA/move_mouse/action",
-            payload:`-deltaX:${deltaX} -deltaY:${deltaY}`,
+            payload:`-deltaX:${-deltaX} -deltaY:${-deltaY}`,
         });
     }
 
@@ -237,6 +237,9 @@ class PCCardServices extends LitElement {
         this.timer = null;
         this.holdinterval = null;
         this.holdaction = null;
+
+        initialX = null;
+        initialY = null;
     }
 
     onTouchMove(event) {
@@ -252,9 +255,12 @@ class PCCardServices extends LitElement {
 
         this.sendMouseDelta(diffX, diffY);
 
-        if (this._config.enable_button_feedback === undefined || this._config.enable_button_feedback) fireEvent(window, "haptic", "selection");
-        initialX = null;
-        initialY = null;
+        if (this._config.enable_button_feedback === undefined || this._config.enable_button_feedback)
+        { 
+            //fireEvent(window, "haptic", "selection");
+        }
+        // initialX = null;
+        // initialY = null;
     }
 
     handleActionClick(e) {
